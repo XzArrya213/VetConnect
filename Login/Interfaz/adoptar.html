@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="Interfaz.html">
+
+  <title>Adopciones de Mascotas</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+    header {
+    width: 100%;
+    height: 8%;
+    background: #171717;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: .2s;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li {
+    margin: 0 1rem;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    color: #fff;
+    transition: .2s;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover {
+    color: #59db1d;
+}
+
+
+header .logo {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #f9580e;
+    cursor: pointer;
+    display: none;
+    transition: .2s;
+}
+    
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    
+    /* Estilos del contenido principal */
+    .main-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px;
+      
+    }
+    
+    .info-section {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      animation: fade-in 0.5s ease-in-out;
+    }
+    
+    .info-section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .info-section h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+    
+    /* Estilos del botón de adoptar */
+    .adopt-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .adopt-button:hover {
+      background-color: #555;
+    }
+    
+    /* Animaciones */
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="" class="logo">Bienvenido</a>
+
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="Interfaz.html" class="active">Inicio</a></li>
+            <li><a href="Interfaz.html" >Nosotros</a></li>
+            <li><a href="Interfaz.html" >Apartados</a></li>
+            <li><a href="Interfaz.html" >Organizadores</a></li>
+            <li><a href="Interfaz.html" >Contacto</a></li>
+        </ul>
+        
+    </nav>
+    <div class="fas fa-bars"></div>
+</header>
+
+  <div class="main-container">
+    <div class="info-section">
+      <h2>Adopta una Mascota</h2>
+      <p>Encuentra a tu compañero peludo perfecto para adoptar.</p>
+      <a href="formulario.html" class="adopt-button">Adoptar</a>
+    </div>
+    
+    <div class="info-section">
+      <h2>Requisitos de Adopción</h2>
+      <p>Para adoptar una mascota, debes cumplir con los siguientes requisitos:</p>
+      <ul>
+        <li>Tener más de 18 años.</li>
+        <li>Tener espacio adecuado para la mascota.</li>
+        <li>Compromiso de cuidado y amor hacia el animal.</li>
+      </ul>
+    </div>
+    
+    <div class="info-section">
+      <h2>Proceso de Adopción</h2>
+      <p>El proceso de adopción incluye los siguientes pasos:</p>
+      <ol>
+        <li>Visitar el refugio y conocer a las mascotas disponibles.</li>
+        <li>Llenar un formulario de adopción.</li>
+        <li>Realizar una entrevista con el equipo de adopciones.</li>
+        <li>Realizar el pago de la tarifa de adopción.</li>
+        <li>Llevar a tu nueva mascota a casa y disfrutar de su compañía.</li>
+      </ol>
+    </div>
+  </div>
+  
+  <script>
+    // Animación del botón de adoptar
+    const adoptButton = document.querySelector('.adopt-button');
+    adoptButton.addEventListener('mouseover', function() {
+      this.style.transform = 'scale(1.1)';
+    });
+    adoptButton.addEventListener('mouseout', function() {
+      this.style.transform = 'scale(1)';
+    });
+  </script>
+</body>
+</html>
